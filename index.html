@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anindita Bose — Strategic Technical Leader and Risk Management Expert at Commonwealth Bank. 20+ years in Data Science, Credit Risk, and Decision Automation.">
+    <title>Anindita Bose - Professional Career Portfolio | Commonwealth Bank</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --cba-gold: #FFD100;
+            --cba-black: #000000;
+            --cba-dark-grey: #1E1E1E;
+            --cba-grey: #6B7280;
+            --cba-light-grey: #F3F4F6;
+            --cba-white: #FFFFFF;
+            --accent-blue: #0066CC;
+            --success-green: #059669;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--cba-dark-grey);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.98);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--cba-white);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .cba-logo-nav {
+            width: 40px;
+            height: 40px;
+            background: var(--cba-gold);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--cba-black);
+            font-size: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--cba-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background: var(--cba-gold);
+            color: var(--cba-black);
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--cba-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--cba-black) 0%, var(--cba-dark-grey) 100%);
+            color: var(--cba-white);
+            padding: 8rem 0 4rem;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23FFD100" fill-opacity="0.03"><circle cx="30" cy="30" r="4"/></g></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--cba-gold) 0%, #FFF700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .header-text p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--cba-gold);
+            color: var(--cba-black);
+        }
+
+        .btn-primary:hover {
+            background: #FFF700;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--cba-white);
+            border: 2px solid var(--cba-white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--cba-white);
+            color: var(--cba-black);
+            transform: translateY(-2px);
+        }
+
+        .header-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-card {
+            background: var(--cba-white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-xl);
+            text-align: center;
+            max-width: 300px;
+            transform: rotate(-5deg);
+            transition: all 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--cba-gold) 0%, #FFF700 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--cba-black);
+            margin: 0 auto 1rem;
+        }
+
+        .profile-card h3 {
+            color: var(--cba-dark-grey);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-card p {
+            color: var(--cba-grey);
+            font-size: 0.9rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Section */
+        .section {
+            background: var(--cba-white);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border-left: 6px solid var(--cba-gold);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--cba-gold) 0%, transparent 70%);
+            opacity: 0.1;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .section-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--cba-gold) 0%, #FFF700 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .section-header:hover .section-icon {
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        .section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--cba-dark-grey);
+            margin: 0;
+            flex: 1;
+        }
+
+        .toggle-arrow {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+            color: var(--cba-grey);
+        }
+
+        .section.collapsed .toggle-arrow {
+            transform: rotate(-90deg);
+        }
+
+        .section-content {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .section.collapsed .section-content {
+            max-height: 0;
+            opacity: 0;
+            padding: 0;
+        }
+
+        /* Strengths Grid */
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .strength-item {
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+            border: 2px solid var(--cba-light-grey);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .strength-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--cba-gold), var(--accent-blue));
+        }
+
+        .strength-item:hover {
+            border-color: var(--cba-gold);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .strength-item h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--cba-dark-grey);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .strength-item p, .strength-item ul {
+            color: var(--cba-grey);
+            line-height: 1.7;
+        }
+
+        .strength-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .strength-item li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .strength-item li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--cba-gold);
+            font-weight: bold;
+        }
+
+        /* Career Pathway */
+        .career-pathway {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pathway-step {
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+            border-radius: 15px;
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            border: 2px solid var(--cba-light-grey);
+            transition: all 0.3s ease;
+        }
+
+        .pathway-step:hover {
+            border-color: var(--cba-gold);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .pathway-step h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--cba-dark-grey);
+            margin-bottom: 1rem;
+        }
+
+        .pathway-step p {
+            color: var(--cba-grey);
+            font-size: 1.1rem;
+        }
+
+        /* Downloads Section */
+        .downloads-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .download-card {
+            background: linear-gradient(135deg, var(--cba-gold) 0%, #FFF700 100%);
+            border-radius: 15px;
+            padding: 2.5rem;
+            color: var(--cba-black);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+            transform: rotate(45deg);
+        }
+
+        .download-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .download-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .download-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .download-card p {
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .download-card .btn {
+            background: var(--cba-black);
+            color: var(--cba-white);
+        }
+
+        .download-card .btn:hover {
+            background: var(--cba-dark-grey);
+            transform: translateY(-2px);
+        }
+
+        /* Support Network */
+        .supports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .support-category {
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            border-left: 6px solid var(--accent-blue);
+            transition: all 0.3s ease;
+        }
+
+        .support-category:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .support-category h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--cba-dark-grey);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .support-person {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(255, 209, 0, 0.1);
+            border-radius: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .support-person:hover {
+            background: rgba(255, 209, 0, 0.2);
+            transform: translateX(5px);
+        }
+
+        .support-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--cba-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--cba-black);
+            font-size: 1rem;
+        }
+
+        .support-info {
+            flex: 1;
+        }
+
+        .support-name {
+            font-weight: 700;
+            color: var(--cba-dark-grey);
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .support-role {
+            color: var(--cba-grey);
+            font-size: 0.9rem;
+        }
+
+        /* Interactive Elements */
+        .interactive-legend {
+            background: linear-gradient(135deg, var(--cba-gold) 0%, #FFF700 100%);
+            color: var(--cba-black);
+            padding: 1.5rem 2rem;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .interactive-legend::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* Skills Assessment */
+        .skills-assessment {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-left: 6px solid var(--accent-blue);
+        }
+
+        .skills-assessment h4 {
+            color: var(--cba-dark-grey);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-level {
+            margin-bottom: 1rem;
+            padding: 0.5rem 0;
+        }
+
+        .skill-level strong {
+            color: var(--cba-dark-grey);
+            display: inline-block;
+            min-width: 120px;
+        }
+
+        .skill-level span {
+            color: var(--cba-grey);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .header-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .header-text h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .header {
+                padding: 6rem 0 2rem;
+            }
+            
+            .header-text h1 {
+                font-size: 2.2rem;
+            }
+            
+            .header-text p {
+                font-size: 1.1rem;
+            }
+            
+            .container {
+                padding: 2rem 1rem;
+            }
+            
+            .section {
+                padding: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .strengths-grid,
+            .career-pathway,
+            .downloads-grid,
+            .supports-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+        .section:nth-child(5) { animation-delay: 0.5s; }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: var(--cba-gold);
+            z-index: 999;
+            transition: width 0.1s ease;
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            background: var(--cba-gold);
+            color: var(--cba-black);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 998;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #FFF700;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* Print Styles */
+        @media print {
+            .navbar,
+            .interactive-legend,
+            .header-buttons {
+                display: none;
+            }
+            
+            .section {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="cba-logo-nav">CBA</div>
+                Anindita Bose
+            </a>
+            <ul class="nav-links">
+                <li><a href="#overview" class="active">Overview</a></li>
+                <li><a href="#strengths">Strengths</a></li>
+                <li><a href="#career">Career Plan</a></li>
+                <li><a href="#downloads">Downloads</a></li>
+                <li><a href="#network">Support Network</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Anindita Bose</h1>
+                <p>Strategic Technical Leader & Risk Management Expert<br>
+                   20+ years driving business value through Data Science & Decision Automation</p>
+                <div class="header-buttons">
+                    <a href="#downloads" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        Download Reports
+                    </a>
+                    <a href="#career" class="btn btn-secondary">
+                        <i class="fas fa-signs-post"></i>
+                        View Career Plan
+                    </a>
+                </div>
+            </div>
+            <div class="header-visual">
+                <div class="profile-card">
+                    <div class="profile-avatar">AB</div>
+                    <h3>Chapter Lead</h3>
+                    <p>Data Science<br>Commonwealth Bank</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="interactive-legend">
+            💡 Click on section headers to expand/collapse content • Hover over cards for interactive details • Scroll to explore sections
+        </div>
+
+        <!-- Overview Section -->
+        <section class="section fade-in" id="overview">
+            <div class="section-header" onclick="toggleSection('overview')">
+                <div class="section-icon">👤</div>
+                <h2>Professional Overview</h2>
+                <div class="toggle-arrow">▼</div>
+            </div>
+            <div class="section-content">
+                <div class="strengths-grid">
+                    <div class="strength-item">
+                        <h3>💼 Experience & Expertise</h3>
+                        <p><strong>20+ years</strong> in Data Science and Decision Automation within Financial Services, with proven leadership across multiple organizations including Commonwealth Bank of Australia (CBA), Zip BNPL, Slice, and ING Bank.</p>
+                    </div>
+                    <div class="strength-item">
+                        <h3>🎯 Strategic Leadership</h3>
+                        <p>Driving business value through strategic technical leadership and innovation, with expertise in architecting scalable, automated solutions that deliver measurable outcomes.</p>
+                    </div>
+                    <div class="strength-item">
+                        <h3>📊 Risk Management Excellence</h3>
+                        <p><a href="https://www.rmia.org.au/rmia-certification/certified-practising-risk-manager" target="_blank" rel="noopener noreferrer">Certified Practising Risk Manager (CPRM®)</a> — a professional credential awarded by the Risk Management Institute of Australasia (RMIA) for experienced practitioners demonstrating strategic risk oversight, governance, and organisational resilience competencies.</p>
+                    </div>
+                    <div class="strength-item">
+                        <h3>💳 Credit Risk Specialization</h3>
+                        <p>Deep expertise in end-to-end credit risk modelling — IFRS9 expected credit loss, PD/LGD/EAD model development, regulatory capital under the Internal Ratings-Based (IRB) approach, and model validation. Led the IRB model development that secured APRA's approval for ING Bank Australia to use internal models to calculate credit risk capital requirements, with parallel engagement on ECB IRB standards.</p>
+                        <div style="margin-top: 12px; padding: 10px 14px; background: linear-gradient(135deg, #fff8e1 0%, #fffde7 100%); border-left: 3px solid #f9a825; border-radius: 4px; font-size: 0.88em;">
+                            <span style="font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #f57f17; font-size: 0.85em;">📰 In the News</span><br>
+                            <a href="https://www.apra.gov.au/news-and-publications/apra-approves-ing-bank-australia-limited-to-use-internal-models-to-calculate" target="_blank" rel="noopener noreferrer" style="color: #1565c0; text-decoration: none; font-weight: 500;">APRA approves ING Bank Australia Limited to use internal models to calculate credit risk capital requirements</a> — Australian Prudential Regulation Authority
+                        </div>
+                    </div>
+                    <div class="strength-item">
+                        <h3>🚀 Innovation & Automation</h3>
+                        <p>Expert in end-to-end credit lifecycle decisioning automation: underwriting, limit management, early warning systems, collection optimization, and recovery strategies.</p>
+                    </div>
+                    <div class="strength-item" style="border-left: 4px solid var(--accent-blue); background: linear-gradient(135deg, #f0f8ff 0%, #fff 100%);">
+                        <h3>🏆 2026 Data Science HiPo Talent Program</h3>
+                        <p>Selected as one of <strong>16 participants globally</strong> in CBA's Data Science High-Potential Talent Program (April – November 2026), designed to accelerate Senior Managers into Chapter Area Lead and Principal Data Scientist roles. Programme includes leadership assessments, workshops, mentoring, and a group capstone project.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CliftonStrengths Section -->
+        <section class="section fade-in" id="strengths">
+            <div class="section-header" onclick="toggleSection('strengths')">
+                <div class="section-icon">⭐</div>
+                <h2>CliftonStrengths Profile</h2>
+                <div class="toggle-arrow">▼</div>
+            </div>
+            <div class="section-content">
+                <div class="strengths-grid">
+                    <div class="strength-item">
+                        <h3>🎯 1. Achiever</h3>
+                        <p>I work hard and possess great stamina, taking immense satisfaction in being busy and productive. I have a constant need for attainment with an internal fire that drives me to accomplish meaningful goals daily.</p>
+                    </div>
+                    <div class="strength-item">
+                        <h3>🤝 2. Includer</h3>
+                        <p>I instinctively accept others and am aware of those who feel left out, making efforts to include them. I cast few judgments and believe fundamentally that everyone is equally important and should be included.</p>
+                    </div>
+                    <div class="strength-item">
+                        <h3>✅ 3. Responsibility</h3>
+                        <p>I take psychological ownership of my commitments and am dependable, embracing values such as honesty and loyalty. I feel emotionally bound to follow through on commitments to completion.</p>
+                    </div>
+                    <div class="strength-item">
+                        <h3>🔍 4. Analytical</h3>
+                        <p>I search for reasons and causes, thinking about all factors that might affect a situation. I bring objective examination to challenges, seeking to understand patterns and develop fact-based solutions.</p>
+                    </div>
+                    <div class="strength-item">
+                        <h3>⚙️ 5. Arranger</h3>
+                        <p>I am both organized and flexible, enjoying the process of figuring out how to align people and resources to achieve the best results. I excel at managing multiple variables and finding optimal configurations.</p>
+                    </div>
+                    <div class="strength-item" style="display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <h3>📥 CliftonStrengths Report</h3>
+                            <p>Full Top 5 assessment report with detailed strength insights and professional development recommendations.</p>
+                        </div>
+                        <a href="Bose-Anindita-SF_TOP_5.pdf" class="btn" download style="margin-top: 1.5rem; background: var(--cba-gold); color: var(--cba-black); padding: 0.7rem 1.2rem; font-size: 0.9rem; align-self: flex-start;">
+                            <i class="fas fa-download"></i>
+                            Download Report
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Strength Statement Subsection -->
+                <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #fff9e6 0%, #fff 100%); border-radius: 15px; border-left: 6px solid var(--cba-gold);">
+                    <h3 style="font-size: 1.8rem; font-weight: 700; color: var(--cba-dark-grey); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 1.5rem;">💡</span>
+                        Strength Statement
+                    </h3>
+                    <p style="font-size: 1.2rem; line-height: 1.8; color: var(--cba-dark-grey); margin-bottom: 2rem; font-style: italic;">
+                        "Driving Business Value Through Strategic Technical Leadership"
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.7; color: var(--cba-grey); margin-bottom: 2rem;">
+                        I excel at solving high-impact, complex business challenges through strategic technical leadership and innovation. My approach is characterized by:
+                    </p>
+                    
+                    <div class="strengths-grid" style="margin-top: 1.5rem;">
+                        <div class="strength-item" style="background: linear-gradient(135deg, #f0f8ff 0%, #fff 100%); border-color: var(--accent-blue);">
+                            <h4 style="font-size: 1.2rem; font-weight: 700; color: var(--cba-dark-grey); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                                🎯 Strategic Solution Design
+                            </h4>
+                            <ul style="color: var(--cba-grey); line-height: 1.7; list-style: none; padding-left: 0;">
+                                <li style="padding: 0.3rem 0; position: relative; padding-left: 1.5rem;">Developing automated, scalable, and reliable solutions that drive measurable business value</li>
+                                <li style="padding: 0.3rem 0; position: relative; padding-left: 1.5rem;">Architecting systems that balance technical excellence with operational efficiency</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="strength-item" style="background: linear-gradient(135deg, #f0f8ff 0%, #fff 100%); border-color: var(--accent-blue);">
+                            <h4 style="font-size: 1.2rem; font-weight: 700; color: var(--cba-dark-grey); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                                ⚡ Efficient Execution
+                            </h4>
+                            <ul style="color: var(--cba-grey); line-height: 1.7; list-style: none; padding-left: 0;">
+                                <li style="padding: 0.3rem 0; position: relative; padding-left: 1.5rem;">Applying the Pareto principle to deliver 80% of value with 20% of effort, prioritizing high-impact initiatives</li>
+                                <li style="padding: 0.3rem 0; position: relative; padding-left: 1.5rem;">Focusing resources on solutions that yield maximum business outcomes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="strength-item" style="background: linear-gradient(135deg, #f0f8ff 0%, #fff 100%); border-color: var(--accent-blue);">
+                            <h4 style="font-size: 1.2rem; font-weight: 700; color: var(--cba-dark-grey); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                                🔄 Continuous Improvement
+                            </h4>
+                            <ul style="color: var(--cba-grey); line-height: 1.7; list-style: none; padding-left: 0;">
+                                <li style="padding: 0.3rem 0; position: relative; padding-left: 1.5rem;">Embracing an iterative approach: Implement → Test → Learn → Iterate</li>
+                                <li style="padding: 0.3rem 0; position: relative; padding-left: 1.5rem;">Leveraging insights from each cycle to refine and optimize solutions</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="strength-item" style="background: linear-gradient(135deg, #f0f8ff 0%, #fff 100%); border-color: var(--accent-blue);">
+                            <h4 style="font-size: 1.2rem; font-weight: 700; color: var(--cba-dark-grey); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                                🤝 Business Partnership
+                            </h4>
+                            <ul style="color: var(--cba-grey); line-height: 1.7; list-style: none; padding-left: 0;">
+                                <li style="padding: 0.3rem 0; position: relative; padding-left: 1.5rem;">Building trusted relationships as a strategic partner to business stakeholders</li>
+                                <li style="padding: 0.3rem 0; position: relative; padding-left: 1.5rem;">Aligning technical solutions with organizational goals and delivering tangible results</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Development Section -->
+        <section class="section fade-in" id="career">
+            <div class="section-header" onclick="toggleSection('career')">
+                <div class="section-icon">🚀</div>
+                <h2>Career Development & Pathway</h2>
+                <div class="toggle-arrow">▼</div>
+            </div>
+            <div class="section-content">
+                <div class="career-pathway">
+                    <div class="pathway-step">
+                        <h3>Current Position</h3>
+                        <p>Data Science Chapter Lead<br><em>Commonwealth Bank</em></p>
+                    </div>
+                    <div class="pathway-step">
+                        <h3>XX</h3>
+                        <p>Data Science Chapter Area Lead<br><em>Expanded leadership & strategic impact</em></p>
+                    </div>
+                    <div class="pathway-step">
+                        <h3>3-4 Years</h3>
+                        <p>Distinguished AI Scientist<br><em>Enterprise AI/ML strategy leadership</em></p>
+                    </div>
+                </div>
+
+                <div class="skills-assessment">
+                    <h4>Current Skill Assessment</h4>
+                    <div class="skill-level">
+                        <strong>Expert Level:</strong>
+                        <span> Machine Learning, Risk Management, Credit Risk, Decision Automation, IFRS9, Regulatory Compliance</span>
+                    </div>
+                    <div class="skill-level">
+                        <strong>Advanced Level:</strong>
+                        <span>Leadership & Team Management, Project Management, Agentic Solution - Data Insights & Analytics</span>
+                    </div>
+                    <div class="skill-level">
+                        <strong>Sound Level:</strong>
+                        <span>AI-RAG Solutions, AI-Document Intelligence, Website Design</span>
+                    </div>
+                    <div class="skill-level">
+                        <strong>Aware Level:</strong>
+                        <span>Graph RAG, Custom LLM, Multimodal solutions, Emerging Technologies & Innovation</span>
+                    </div>
+                </div>
+
+                <div class="strengths-grid" style="margin-top: 2rem;">
+                    <div class="strength-item">
+                        <h3>🎯 Development Focus Areas</h3>
+                        <ul>
+                            <li>Strategic Influence and Communication</li>
+                            <li>Scaling Arranger Capabilities</li>
+                            <li>Strategic Thinking and Vision Development</li>
+                        </ul>
+                    </div>
+                    <div class="strength-item">
+                        <h3>📈 Short-term Goals (XX)</h3>
+                        <ul>
+                            <li>Advance to Data Science Chapter Area Lead role</li>
+                            <li>Complete CBA's <strong>2026 Data Science HiPo Talent Program</strong> (Apr – Nov 2026)</li>
+                            <li>Expand leadership capabilities and team management</li>
+                            <li>Drive strategic data science initiatives</li>
+                            <li>Strengthen business stakeholder relationships</li>
+                        </ul>
+                    </div>
+                    <div class="strength-item">
+                        <h3>🎯 Medium-term Goals (3-4 Years)</h3>
+                        <ul>
+                            <li>Achieve Distinguished AI Scientist position</li>
+                            <li>Lead enterprise-wide AI/ML strategy</li>
+                            <li>Develop industry thought leadership</li>
+                            <li>Build comprehensive AI governance framework</li>
+                        </ul>
+                    </div>
+                    <div class="strength-item">
+                        <h3>📊 Success Metrics</h3>
+                        <ul>
+                            <li>Team engagement</li>
+                            <li>Strategic project delivery success</li>
+                            <li>Cross-functional collaboration effectiveness</li>
+                            <li>Thought leadership</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Downloads Section -->
+        <section class="section fade-in" id="downloads">
+            <div class="section-header" onclick="toggleSection('downloads')">
+                <div class="section-icon">📥</div>
+                <h2>Professional Documents</h2>
+                <div class="toggle-arrow">▼</div>
+            </div>
+            <div class="section-content">
+                <div class="downloads-grid">
+                    <div class="download-card">
+                        <i class="fas fa-chart-bar icon"></i>
+                        <h3>CliftonStrengths Report</h3>
+                        <p>Complete Top 5 CliftonStrengths assessment results with detailed analysis and professional development recommendations.</p>
+                        <a href="Bose-Anindita-SF_TOP_5.pdf" class="btn" download>
+                            <i class="fas fa-download"></i>
+                            Download Report
+                        </a>
+                    </div>
+                    <div class="download-card" style="background: linear-gradient(135deg, #0066CC 0%, #0052a3 100%); color: var(--cba-white);">
+                        <i class="fas fa-star icon" style="color: var(--cba-gold);"></i>
+                        <h3 style="color: var(--cba-white);">2026 Data Science HiPo Talent Program</h3>
+                        <p style="color: rgba(255,255,255,0.85);">CBA's High-Potential Talent Program brochure — accelerating Data Science Senior Managers into Chapter Area Lead and Principal Data Scientist roles (April – November 2026).</p>
+                        <a href="2026 Data Science Talent Program Brochure .pdf" class="btn" download style="background: var(--cba-gold); color: var(--cba-black);">
+                            <i class="fas fa-download"></i>
+                            Download Brochure
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Network Section -->
+        <section class="section fade-in" id="network">
+            <div class="section-header" onclick="toggleSection('network')">
+                <div class="section-icon">👥</div>
+                <h2>Career Development Support Network</h2>
+                <div class="toggle-arrow">▼</div>
+            </div>
+            <div class="section-content">
+                <div class="supports-grid">
+                    <div class="support-category">
+                        <h4><i class="fas fa-users"></i> Leadership Support</h4>
+                        <div class="support-person">
+                            <div class="support-avatar">OF</div>
+                            <div class="support-info">
+                                <div class="support-name">Oliver Fleming</div>
+                                <div class="support-role">General Manager</div>
+                            </div>
+                        </div>
+                        <div class="support-person">
+                            <div class="support-avatar">VH</div>
+                            <div class="support-info">
+                                <div class="support-name">Victoria Hickey</div>
+                                <div class="support-role">Executive General Manager</div>
+                            </div>
+                        </div>
+                        <div class="support-person">
+                            <div class="support-avatar">MC</div>
+                            <div class="support-info">
+                                <div class="support-name">Michelle Cronan</div>
+                                <div class="support-role">Career Sponsor</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="support-category">
+                        <h4><i class="fas fa-users-cog"></i> Team Leadership</h4>
+                        <div class="support-person">
+                            <div class="support-avatar">AB</div>
+                            <div class="support-info">
+                                <div class="support-name">Alex Bibin</div>
+                                <div class="support-role">Crew Product Owner</div>
+                            </div>
+                        </div>
+                        <div class="support-person">
+                            <div class="support-avatar">MC</div>
+                            <div class="support-info">
+                                <div class="support-name">Michael Cao</div>
+                                <div class="support-role">Crew Lead</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="support-category">
+                        <h4><i class="fas fa-brain"></i> Data Science Practice</h4>
+                        <div class="support-person">
+                            <div class="support-avatar">DR</div>
+                            <div class="support-info">
+                                <div class="support-name">David Rowe</div>
+                                <div class="support-role">Distinguished AI Scientist</div>
+                            </div>
+                        </div>
+                        <div class="support-person">
+                            <div class="support-avatar">TP</div>
+                            <div class="support-info">
+                                <div class="support-name">Tyrone Pollard</div>
+                                <div class="support-role">Chapter Area Lead</div>
+                            </div>
+                        </div>
+                        <div class="support-person">
+                            <div class="support-avatar">BP</div>
+                            <div class="support-info">
+                                <div class="support-name">Bronte Pendergast</div>
+                                <div class="support-role">Principal Data Scientist</div>
+                            </div>
+                        </div>
+                        <div class="support-person">
+                            <div class="support-avatar">BB</div>
+                            <div class="support-info">
+                                <div class="support-name">Ben Brown</div>
+                                <div class="support-role">Senior Staff Data Scientist</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="support-category">
+                        <h4><i class="fas fa-lightbulb"></i> Strategic Advisory</h4>
+                        <div class="support-person">
+                            <div class="support-avatar">RN</div>
+                            <div class="support-info">
+                                <div class="support-name">Ritchie Ng Zhenghao</div>
+                                <div class="support-role">Distinguished Data Scientist & CEO Technical Advisor</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer style="background: var(--cba-dark-grey); color: var(--cba-white); text-align: center; padding: 2rem; margin-top: 3rem;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p style="margin-bottom: 1rem; font-size: 1.1rem; font-weight: 600;">Anindita Bose | Commonwealth Bank</p>
+            <p style="opacity: 0.8;">Strategic Technical Leadership • Data Science Excellence • Risk Management Innovation</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        function updateActiveNavLink() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Back to top button visibility
+        function updateBackToTop() {
+            const btn = document.getElementById('backToTop');
+            if (btn) {
+                btn.classList.toggle('visible', window.pageYOffset > 300);
+            }
+        }
+
+        // Scroll progress bar
+        function updateScrollProgress() {
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (scrollTop / scrollHeight) * 100;
+            document.querySelector('.scroll-progress').style.width = scrolled + '%';
+        }
+
+        // Section toggle functionality
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const content = section.querySelector('.section-content');
+            const arrow = section.querySelector('.toggle-arrow');
+            const header = section.querySelector('.section-header');
+
+            section.classList.toggle('collapsed');
+            const isCollapsed = section.classList.contains('collapsed');
+
+            if (isCollapsed) {
+                content.style.maxHeight = '0px';
+                content.style.opacity = '0';
+                content.style.marginBottom = '0';
+                arrow.style.transform = 'rotate(-90deg)';
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                content.style.opacity = '1';
+                content.style.marginBottom = '0';
+                arrow.style.transform = 'rotate(0deg)';
+            }
+            header.setAttribute('aria-expanded', isCollapsed ? 'false' : 'true');
+        }
+
+        // Smooth scrolling for navigation links
+        function initSmoothScrolling() {
+            const navLinks = document.querySelectorAll('.nav-links a, .header-buttons a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        const targetSection = document.getElementById(targetId);
+                        if (targetSection) {
+                            const offsetTop = targetSection.offsetTop - 100;
+                            window.scrollTo({
+                                top: offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        }
+
+        // Interactive card effects
+        function initCardInteractions() {
+            const cards = document.querySelectorAll('.strength-item, .pathway-step, .download-card, .support-person');
+            
+            cards.forEach(card => {
+                // Mouse enter effect
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = this.style.transform || '';
+                    if (!this.style.transform.includes('translateY')) {
+                        this.style.transform += ' translateY(-3px)';
+                    }
+                });
+                
+                // Mouse leave effect  
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = this.style.transform.replace(' translateY(-3px)', '');
+                });
+
+                // Click effect for strength items
+                if (card.classList.contains('strength-item')) {
+                    card.addEventListener('click', function() {
+                        // Remove active class from siblings
+                        const siblings = this.parentNode.querySelectorAll('.strength-item');
+                        siblings.forEach(sibling => sibling.classList.remove('active'));
+                        
+                        // Add active class to clicked item
+                        this.classList.add('active');
+                        
+                        // Create ripple effect
+                        createRippleEffect(event);
+                    });
+                }
+            });
+        }
+
+        // Create ripple effect on click
+        function createRippleEffect(event) {
+            const ripple = document.createElement('div');
+            const card = event.currentTarget;
+            const rect = card.getBoundingClientRect();
+            
+            ripple.style.cssText = `
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255, 209, 0, 0.3);
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                left: ${event.clientX - rect.left - 10}px;
+                top: ${event.clientY - rect.top - 10}px;
+                width: 20px;
+                height: 20px;
+                pointer-events: none;
+            `;
+            
+            card.style.position = 'relative';
+            card.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        }
+
+        // Add ripple animation keyframes to CSS
+        function addRippleAnimation() {
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes ripple {
+                    to {
+                        transform: scale(4);
+                        opacity: 0;
+                    }
+                }
+                .strength-item.active {
+                    background: linear-gradient(135deg, #fff9e6 0%, #fff 100%);
+                    border-color: var(--cba-gold);
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        // Mobile menu functionality
+        function initMobileMenu() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+
+            function closeMobileMenu() {
+                navLinks.style.display = 'none';
+            }
+
+            function openMobileMenu() {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'rgba(0, 0, 0, 0.98)';
+                navLinks.style.padding = '1rem';
+                navLinks.style.borderRadius = '0 0 10px 10px';
+            }
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navLinks.style.display === 'flex' ? closeMobileMenu() : openMobileMenu();
+                });
+
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', closeMobileMenu);
+                });
+            }
+        }
+
+        // Intersection Observer for fade-in animations
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '-50px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(section);
+            });
+        }
+
+        // Download tracking
+        function trackDownloads() {
+            const downloadLinks = document.querySelectorAll('a[download]');
+            downloadLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const fileName = this.getAttribute('href');
+                    console.log(`Download initiated: ${fileName}`);
+                    
+                    // Visual feedback
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check"></i> Downloaded!';
+                    this.style.background = 'var(--success-green)';
+                    
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                        this.style.background = '';
+                    }, 2000);
+                });
+            });
+        }
+
+        // Keyboard navigation
+        function initKeyboardNavigation() {
+            document.addEventListener('keydown', function(e) {
+                // ESC key to collapse all sections
+                if (e.key === 'Escape') {
+                    document.querySelectorAll('.section').forEach(section => {
+                        if (!section.classList.contains('collapsed')) {
+                            toggleSection(section.id);
+                        }
+                    });
+                }
+                
+                // Enter or Space on section headers
+                if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('.section-header')) {
+                    e.preventDefault();
+                    const sectionId = e.target.closest('.section').id;
+                    toggleSection(sectionId);
+                }
+            });
+
+            // Add tabindex to section headers for keyboard accessibility
+            document.querySelectorAll('.section-header').forEach(header => {
+                header.setAttribute('tabindex', '0');
+                header.setAttribute('role', 'button');
+                header.setAttribute('aria-expanded', 'true');
+            });
+        }
+
+        // Navbar scroll effect
+        function initNavbarScroll() {
+            const navbar = document.querySelector('.navbar');
+            let lastScrollTop = 0;
+            
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                // Add scrolled class when scrolling down
+                if (scrollTop > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all functionality
+            initSmoothScrolling();
+            initCardInteractions();
+            initMobileMenu();
+            initScrollAnimations();
+            initKeyboardNavigation();
+            initNavbarScroll();
+            trackDownloads();
+            addRippleAnimation();
+            
+            // Initial calls
+            updateActiveNavLink();
+            updateScrollProgress();
+            updateBackToTop();
+            
+            // Add loading animation
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Performance optimization: debounced scroll handler
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Replace direct scroll listeners with debounced versions for better performance
+        window.addEventListener('scroll', debounce(() => {
+            updateActiveNavLink();
+            updateScrollProgress();
+            updateBackToTop();
+        }, 10));
+    </script>
+</body>
+</html>
