@@ -775,6 +775,51 @@
             box-shadow: var(--shadow-xl);
         }
 
+        /* Cross-functional timeline */
+        .cf-timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 1.5rem;
+        }
+        .cf-timeline-step {
+            width: 22%;
+            text-align: center;
+            font-weight: 600;
+            color: var(--cba-dark-grey);
+        }
+        .cf-timeline-step p {
+            color: var(--cba-grey);
+            font-weight: 400;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        .cf-circle {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 0.75rem;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .cf-line {
+            height: 4px;
+            background: var(--cba-gold);
+            flex-grow: 1;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .cf-timeline { flex-direction: column; align-items: center; gap: 1.5rem; }
+            .cf-timeline-step { width: 100%; }
+            .cf-line { display: none; }
+        }
+
         /* Print Styles */
         @media print {
             .navbar,
@@ -804,6 +849,7 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#career" class="active">Career Plan</a></li>
+                <li><a href="#aspirations">Aspirations</a></li>
                 <li><a href="#overview">Overview</a></li>
                 <li><a href="#strengths">Strengths</a></li>
                 <li><a href="#hogan">Hogan Profile</a></li>
@@ -820,7 +866,7 @@
         <div class="header-content">
             <div class="header-text">
                 <h1>Anindita Bose</h1>
-                <p>Strategic Technical Leader & Risk Management Expert<br>
+                <p>Strategic Technical Leader with Risk Management Expertise<br>
                    20+ years driving business value through Data Science & Decision Automation</p>
                 <div class="header-buttons">
                     <a href="#hogan" class="btn btn-primary">
@@ -852,7 +898,7 @@
         <section class="section fade-in" id="career">
             <div class="section-header" onclick="toggleSection('career')">
                 <div class="section-icon">🚀</div>
-                <h2>Career Development & Pathway</h2>
+                <h2>Current Career Development Plan & Pathway</h2>
                 <div class="toggle-arrow">▼</div>
             </div>
             <div class="section-content">
@@ -930,6 +976,127 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Cross-Functional Aspirations & Readiness Section -->
+        <section class="section fade-in" id="aspirations">
+            <div class="section-header" onclick="toggleSection('aspirations')">
+                <div class="section-icon">🌐</div>
+                <h2>Cross-Functional Aspirations &amp; Readiness</h2>
+                <div class="toggle-arrow">▼</div>
+            </div>
+            <div class="section-content">
+
+                <!-- Aspiration statement -->
+                <div style="margin-bottom: 2rem; padding: 2rem; background: linear-gradient(135deg, #f8f9fb 0%, #fff 100%); border-left: 6px solid var(--cba-gold); border-radius: 10px;">
+                    <p style="font-size: 1.15rem; color: var(--cba-dark-grey); line-height: 1.7; margin-bottom: 1.2rem;">
+                        I want to contribute to strategic finance and risk outcomes - two domains where I see the strongest opportunity:
+                    </p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <span style="background: #003087; color: white; padding: 0.4rem 1.2rem; border-radius: 20px; font-weight: 600; font-size: 0.95rem;">🏦 Treasury Strategy &amp; Balance Sheet</span>
+                        <span style="background: var(--accent-blue); color: white; padding: 0.4rem 1.2rem; border-radius: 20px; font-weight: 600; font-size: 0.95rem;">💳 Credit Risk &amp; Decisioning</span>
+                    </div>
+                </div>
+
+                <!-- Domain cards -->
+                <div class="strengths-grid">
+                    <div class="strength-item">
+                        <h3>🏦 Treasury Strategy &amp; Balance Sheet Optimisation</h3>
+                        <p style="color: var(--cba-grey); margin-bottom: 0.75rem;"><strong>Why this interests me:</strong></p>
+                        <ul>
+                            <li>Data science can add significant value in scenario analysis &amp; stress testing</li>
+                            <li>Opportunity to explore how AI supports balance sheet decisions</li>
+                            <li>Capital &amp; liquidity optimisation as a natural extension of credit risk management</li>
+                        </ul>
+                        <p style="color: var(--cba-grey); margin-top: 1rem; margin-bottom: 0.75rem;"><strong>What I want to develop:</strong></p>
+                        <ul>
+                            <li>Relationships with Treasury &amp; Balance Sheet leaders</li>
+                            <li>Understanding of ALCO frameworks and treasury forums</li>
+                            <li>Deeper knowledge of ALM, funding strategy &amp; liquidity risk</li>
+                        </ul>
+                    </div>
+                    <div class="strength-item">
+                        <h3>💳 Credit Decision Engine Optimisation</h3>
+                        <p style="color: var(--cba-grey); margin-bottom: 0.75rem;"><strong>Relevant background:</strong></p>
+                        <ul>
+                            <li>Accountability for decisioning system KPIs at Zip — Write-off$, Arrears Rate, Approval Rate, Automation Rate</li>
+                            <li>Credit risk modelling &amp; decision automation expertise</li>
+                            <li>Exposure to credit policy frameworks &amp; IRB model development</li>
+                        </ul>
+                        <p style="color: var(--cba-grey); margin-top: 1rem; margin-bottom: 0.75rem;"><strong>What I want to develop:</strong></p>
+                        <ul>
+                            <li>Relationships with Credit Strategy leadership</li>
+                            <li>Involvement in credit transformation initiatives</li>
+                            <li>Clarity on path to COO &amp; Risk senior roles</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Readiness roadmap -->
+                <div style="margin-top: 2.5rem; padding: 2rem; background: linear-gradient(135deg, #f0f8ff 0%, #fff 100%); border-radius: 15px; border-left: 6px solid var(--accent-blue);">
+                    <h3 style="font-size: 1.6rem; font-weight: 700; color: var(--cba-dark-grey); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        🗺️ My Readiness Roadmap
+                    </h3>
+                    <p style="color: var(--cba-grey); margin-bottom: 1.5rem; font-style: italic;">Learn &amp; listen → build relationships → contribute → grow into the role</p>
+                    <div class="cf-timeline">
+                        <div class="cf-timeline-step">
+                            <div class="cf-circle" style="background: var(--cba-gold); color: var(--cba-black);">1</div>
+                            <strong>Learn</strong>
+                            <p>Observe forums &amp; understand domain priorities</p>
+                        </div>
+                        <div class="cf-line"></div>
+                        <div class="cf-timeline-step">
+                            <div class="cf-circle">2</div>
+                            <strong>Connect</strong>
+                            <p>Build relationships with Treasury &amp; Credit leaders</p>
+                        </div>
+                        <div class="cf-line"></div>
+                        <div class="cf-timeline-step">
+                            <div class="cf-circle">3</div>
+                            <strong>Contribute</strong>
+                            <p>Add value through stretch projects &amp; initiatives</p>
+                        </div>
+                        <div class="cf-line"></div>
+                        <div class="cf-timeline-step">
+                            <div class="cf-circle">4</div>
+                            <strong>Grow</strong>
+                            <p>Demonstrate readiness for broader responsibility</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guidance sought & how sponsor can help -->
+                <div style="margin-top: 2rem;">
+                    <div class="strengths-grid">
+                        <div class="strength-item" style="background: linear-gradient(135deg, #f0f8ff 0%, #fff 100%); border-color: var(--accent-blue);">
+                            <h3>🏦 Treasury — Guidance I'm Seeking</h3>
+                            <ul>
+                                <li>Introduction to Treasury &amp; Balance Sheet leaders</li>
+                                <li>Access to ALCO / Treasury forums to observe and learn</li>
+                                <li>Recommended areas to study before engaging in this space</li>
+                            </ul>
+                        </div>
+                        <div class="strength-item" style="background: linear-gradient(135deg, #f0f8ff 0%, #fff 100%); border-color: var(--accent-blue);">
+                            <h3>💳 Credit — Guidance I'm Seeking</h3>
+                            <ul>
+                                <li>Connection with Credit Strategy leadership to understand their priorities</li>
+                                <li>Credit transformation initiatives where I could contribute or learn</li>
+                                <li>What a path towards COO &amp; Risk senior roles would require</li>
+                            </ul>
+                        </div>
+                        <div class="strength-item" style="background: linear-gradient(135deg, #fff9e6 0%, #fff 100%); border-color: var(--cba-gold);">
+                            <h3>🎯 How My Sponsor Can Help</h3>
+                            <ul>
+                                <li>Advise on which area is the strongest fit given my background</li>
+                                <li>Introduce me to relevant leaders when appropriate</li>
+                                <li>Provide candid feedback on gaps I need to address</li>
+                                <li>Help identify stretch assignments to build credibility</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -1619,6 +1786,20 @@
             });
         }
 
+        // Collapse all sections on load
+        function collapseAllSections() {
+            document.querySelectorAll('.section[id]').forEach(section => {
+                const content = section.querySelector('.section-content');
+                const arrow = section.querySelector('.toggle-arrow');
+                const header = section.querySelector('.section-header');
+                section.classList.add('collapsed');
+                content.style.maxHeight = '0px';
+                content.style.opacity = '0';
+                if (arrow) arrow.style.transform = 'rotate(-90deg)';
+                if (header) header.setAttribute('aria-expanded', 'false');
+            });
+        }
+
         // Initialize everything when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize all functionality
@@ -1630,7 +1811,8 @@
             initNavbarScroll();
             trackDownloads();
             addRippleAnimation();
-            
+            collapseAllSections();
+
             // Initial calls
             updateActiveNavLink();
             updateScrollProgress();
