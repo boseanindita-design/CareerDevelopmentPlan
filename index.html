@@ -1657,7 +1657,9 @@
             const navLinks = document.querySelector('.nav-links');
 
             function closeMobileMenu() {
-                navLinks.style.display = 'none';
+                if (window.innerWidth <= 768) {
+                    navLinks.style.display = 'none';
+                }
             }
 
             function openMobileMenu() {
